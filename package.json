@@ -33,7 +33,7 @@
     "node": ">=10",
     "npm": ">=6"
   },
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "MIT",
   "author": {
     "name": "Rishabh Rao",
     "email": "rishabhsrao@gmail.com",
