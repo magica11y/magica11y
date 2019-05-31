@@ -10,7 +10,7 @@
     "prelint": "yarn run typecheck",
     "lint": "eslint '**/*.js'",
     "typecheck": "flow",
-    "prepublish": "yarn build"
+    "prepare": "yarn build",
   },
   "repository": {
     "type": "git",
