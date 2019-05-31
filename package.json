@@ -12,7 +12,7 @@
     "clean": "rimraf lib dist",
     "clean:nuke": "yarn run clean && rimraf node_modules",
     "pretest": "yarn lint",
-    "test": "jest --maxWorkers=4",
+    "test": "jest --maxWorkers=4 --coverage",
     "prelint": "yarn run typecheck",
     "lint": "eslint '**/*.js'",
     "typecheck": "flow",
