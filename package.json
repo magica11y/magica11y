@@ -4,7 +4,9 @@
   "version": "0.1.0",
   "description": "A suite of utility functions to detect accessibility features desired by the user",
   "scripts": {
-    "build": "webpack --mode production"
+    "prebuild": "yarn test",
+    "build": "webpack --mode production",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -34,5 +36,9 @@
     "babel-loader": "^8.0.6",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2"
+  },
+  "devDependencies": {
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0"
   }
 }

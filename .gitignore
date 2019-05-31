@@ -1,5 +1,6 @@
 .env
 /build
+/coverage
 
 # Node (nodejs.org)
 node_modules
