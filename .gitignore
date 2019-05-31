@@ -5,3 +5,6 @@
 # Node (nodejs.org)
 node_modules
 npm-debug.log*
+
+# Yarn (https://yarnpkg.com)
+package-lock.json
