@@ -1,6 +1,6 @@
 // @flow
 
-import prefersReduceMotion, { motionPreferences } from '../../source/prefersReduceMotion';
+import prefersReduceMotion, { motionPreferences } from '../../src/prefersReduceMotion';
 
 import mockWindowMatchMedia from '../mockWindowMatchMedia';
 

@@ -2,11 +2,11 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    prefersReduceMotion: './source/prefersReduceMotion',
+    prefersReduceMotion: './src/prefersReduceMotion',
   },
   output: {
     filename: '[name].min.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [

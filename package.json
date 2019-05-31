@@ -5,7 +5,10 @@
   "description": "A suite of utility functions to detect accessibility features desired by the user",
   "scripts": {
     "prebuild": "yarn test",
-    "build": "webpack --mode production",
+    "build": "yarn build:dist && yarn build:lib && yarn build:flow",
+    "build:dist": "webpack --mode production",
+    "build:lib": "babel --out-dir lib src",
+    "build:flow": "flow-copy-source --verbose src lib",
     "pretest": "yarn lint",
     "test": "jest --maxWorkers=4",
     "prelint": "yarn run typecheck",
@@ -35,9 +38,11 @@
     "url": "https://medium.com/@rishabhsrao"
   },
   "files": [
-    "build"
+    "dist",
+    "lib"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-flow": "^7.0.0",
@@ -52,6 +57,7 @@
     "eslint-plugin-jest": "^22.6.4",
     "eslint-plugin-prettier": "^3.1.0",
     "flow-bin": "^0.99.1",
+    "flow-copy-source": "^2.0.6",
     "flow-typed": "^2.5.2",
     "jest": "^24.8.0",
     "prettier": "^1.17.1",

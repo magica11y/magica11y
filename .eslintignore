@@ -1,2 +1,3 @@
-build/*
+dist/*
 flow-typed/*
+lib/*

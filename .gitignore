@@ -1,6 +1,7 @@
 .env
-/build
 /coverage
+/dist
+/lib
 
 # Node (nodejs.org)
 node_modules
