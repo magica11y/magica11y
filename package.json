@@ -4,19 +4,20 @@
   "version": "0.2.5",
   "description": "A suite of utility functions to detect accessibility features desired by the user",
   "scripts": {
-    "prebuild": "yarn test",
+    "prebuild": "yarn test:coverage",
     "build": "yarn build:dist && yarn build:lib && yarn build:flow",
     "build:dist": "webpack --mode production",
     "build:lib": "babel --out-dir lib src",
     "build:flow": "flow-copy-source --verbose src lib",
-    "clean": "rimraf lib dist",
+    "clean": "rimraf lib dist coverage",
     "clean:nuke": "yarn run clean && rimraf node_modules",
     "pretest": "yarn lint",
-    "test": "jest --maxWorkers=4 --coverage",
+    "test": "jest --maxWorkers=4",
+    "test:coverage": "yarn test -- --coverage && cat ./tests/coverage/lcov.info | coveralls",
     "prelint": "yarn run typecheck",
     "lint": "eslint '**/*.js'",
     "typecheck": "flow",
-    "preversion": "yarn test"
+    "preversion": "yarn test:coverage"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
+    "coveralls": "^3.0.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.3.0",
