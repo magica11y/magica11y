@@ -1,0 +1,6 @@
+.env
+/build
+
+# Node (nodejs.org)
+node_modules
+npm-debug.log*
