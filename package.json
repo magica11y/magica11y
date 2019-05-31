@@ -24,5 +24,9 @@
     "name": "Rishabh Rao",
     "email": "rishabhsrao@gmail.com",
     "url": "https://medium.com/@rishabhsrao"
+  },
+  "dependencies": {
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
   }
 }
