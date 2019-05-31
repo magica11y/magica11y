@@ -11,6 +11,8 @@
     "lint": "eslint '**/*.js'",
     "typecheck": "flow",
     "prepare": "yarn build",
+    "preversion": "yarn test",
+    "postversion": "git push --tags"
   },
   "repository": {
     "type": "git",
