@@ -1,0 +1,28 @@
+{
+  "name": "@magica11y/behold",
+  "homepage": "https://magica11y.github.io#behold",
+  "version": "0.1.0",
+  "description": "A suite of utility functions to detect accessibility features desired by the user",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magica11y/behold.git"
+  },
+  "keywords": [
+    "a11y",
+    "accessibility",
+    "accessibility-toolkit",
+    "web-accessibility",
+    "javascript",
+    "css-mediaquery"
+  ],
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": {
+    "name": "Rishabh Rao",
+    "email": "rishabhsrao@gmail.com",
+    "url": "https://medium.com/@rishabhsrao"
+  }
+}
