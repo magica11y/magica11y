@@ -1,11 +1,11 @@
 // @flow
 
-export const motionPreferences = {
+export const motionPreferences = Object.freeze({
   REDUCE: 'reduce',
   NO_PREFERENCE: 'no-preference',
-};
+});
 
-export type MotionPreference = 'reduce' | 'no-preference';
+export type MotionPreference = $Values<typeof motionPreferences>;
 
 const getMediaQueryString = (motionPreference: MotionPreference): string => {
   return `(prefers-reduced-motion: ${motionPreference})`;
