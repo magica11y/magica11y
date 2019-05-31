@@ -34,21 +34,19 @@
     "email": "rishabhsrao@gmail.com",
     "url": "https://medium.com/@rishabhsrao"
   },
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
-    "babel-loader": "^8.0.6",
-    "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2"
-  },
-  "devDependencies": {
     "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
     "babel-preset-flow": "^6.23.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jest": "^22.6.4",
     "flow-bin": "^0.99.1",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
   }
 }
