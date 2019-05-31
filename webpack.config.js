@@ -4,7 +4,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
-    prefersReduceMotion: './src/prefersReduceMotion',
+    prefersReducedMotion: './src/prefersReducedMotion',
   },
   output: {
     filename: '[name].min.js',
