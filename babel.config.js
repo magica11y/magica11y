@@ -8,6 +8,6 @@ module.exports = {
         },
       },
     ],
-    'flow',
+    '@babel/preset-flow',
   ],
 };

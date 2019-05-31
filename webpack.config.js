@@ -2,8 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    lightLevel: './source/lightLevel.js',
-    environmentBlending: './source/environmentBlending.js',
+    prefersReduceMotion: './source/prefersReduceMotion',
   },
   output: {
     filename: '[name].min.js',
