@@ -17,7 +17,7 @@
     "prelint": "yarn run typecheck",
     "lint": "eslint '**/*.js'",
     "typecheck": "flow",
-    "preversion": "yarn test:coverage"
+    "preversion": "yarn test"
   },
   "repository": {
     "type": "git",
