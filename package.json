@@ -10,7 +10,8 @@
     "test": "jest --maxWorkers=4",
     "prelint": "yarn run typecheck",
     "lint": "eslint '**/*.js'",
-    "typecheck": "flow"
+    "typecheck": "flow",
+    "prepublish": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,9 @@
     "email": "rishabhsrao@gmail.com",
     "url": "https://medium.com/@rishabhsrao"
   },
+  "files": [
+    "build"
+  ],
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
