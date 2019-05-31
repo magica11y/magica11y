@@ -6,7 +6,9 @@
   "scripts": {
     "prebuild": "yarn test",
     "build": "webpack --mode production",
-    "test": "jest"
+    "pretest": "yarn lint",
+    "test": "jest",
+    "lint": "eslint '**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,10 @@
   },
   "devDependencies": {
     "babel-jest": "^24.8.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
     "jest": "^24.8.0"
   }
 }
