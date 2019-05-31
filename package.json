@@ -1,5 +1,5 @@
 {
-  "name": "@magica11y/magica11y",
+  "name": "magica11y",
   "homepage": "https://magica11y.github.io",
   "version": "0.2.0",
   "description": "A suite of utility functions to detect accessibility features desired by the user",
