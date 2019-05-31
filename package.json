@@ -1,6 +1,6 @@
 {
-  "name": "@magica11y/behold",
-  "homepage": "https://magica11y.github.io#behold",
+  "name": "@magica11y/magica11y",
+  "homepage": "https://magica11y.github.io",
   "version": "0.1.0",
   "description": "A suite of utility functions to detect accessibility features desired by the user",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magica11y/behold.git"
+    "url": "git+https://github.com/magica11y/magica11y.git"
   },
   "keywords": [
     "a11y",
