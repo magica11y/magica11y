@@ -8,3 +8,4 @@ npm-debug.log*
 
 # Yarn (https://yarnpkg.com)
 package-lock.json
+yarn-error.log
