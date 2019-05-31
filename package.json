@@ -4,6 +4,7 @@
   "version": "0.2.3",
   "description": "A suite of utility functions to detect accessibility features desired by the user",
   "scripts": {
+    "prebuild": "yarn test",
     "build": "webpack --mode production",
     "pretest": "yarn lint",
     "test": "jest --maxWorkers=4",
