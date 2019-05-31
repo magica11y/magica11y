@@ -42,10 +42,9 @@ const disableAnimations = motionPreference === motionPreferences.REDUCE;
 #### Usage
 
 ```js
-// @flow
-import prefersReducedMotion, { motionPreferences, type MotionPreference } from 'magica11y/prefersReducedMotion';
+import prefersReducedMotion, { motionPreferences } from 'magica11y/prefersReducedMotion';
 
-const motionPreference: ?MotionPreference = prefersReducedMotion();
+const motionPreference = prefersReducedMotion();
 const disableAnimations = motionPreference === motionPreferences.REDUCE;
 ```
 
@@ -55,11 +54,18 @@ const disableAnimations = motionPreference === motionPreferences.REDUCE;
 | `motionPreferences.REDUCE`        | [`'reduce'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-reduce)               |
 | `null`                            | Preference could not be determined.                                                                             |
 
-#### Flow types
+#### ☔️ Typechecking
+
+You can import the [Flow](https://flow.org) types from the provided [libdefs](https://flow.org/en/docs/libdefs) in `/lib`…
 
 ```js
+// @flow
+import { type MotionPreference } from 'magica11y/prefersReducedMotion';
 
+const motionPreference: ?MotionPreference = prefersReducedMotion();
 ```
+
+🎩 **Note**: `prefersReducedMotion()` returns a [`nullable`](https://flow.org/en/docs/types/primitives/#toc-null-and-void) `MotionPreference` type. So using `?MotionPreference` is recommended.
 
 #### 📝 Documentation
 
