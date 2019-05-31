@@ -26,8 +26,8 @@
     "a11y",
     "accessibility",
     "css-mediaquery",
-    "matchMedia",
-    "prefersReduceMotion"
+    "matchmedia",
+    "prefers-reduced-motion"
   ],
   "engines": {
     "node": ">=10",
