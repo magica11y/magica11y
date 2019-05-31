@@ -3,6 +3,9 @@
   "homepage": "https://magica11y.github.io#behold",
   "version": "0.1.0",
   "description": "A suite of utility functions to detect accessibility features desired by the user",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/magica11y/behold.git"
