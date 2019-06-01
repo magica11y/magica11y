@@ -3,6 +3,7 @@
   "homepage": "https://magica11y.github.io",
   "version": "0.2.6",
   "description": "A suite of utility functions to detect accessibility features desired by the user",
+  "module": "src/index.js",
   "scripts": {
     "build": "yarn build:dist && yarn build:lib && yarn build:flow",
     "build:dist": "webpack --mode production",
