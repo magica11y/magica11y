@@ -13,6 +13,8 @@ magica11y
 
 ## 🚀 Getting started
 
+### 🏗 Installation
+
 Install `magica11y` using `yarn` or `npm`…
 
 ```
@@ -20,37 +22,43 @@ $ yarn add magica11y  # OR
 $ npm install --save magica11y
 ```
 
-Import `magica11y` utility functions in your JavaScript code…
+You can also install `magica11y` from a CDN, such as [jsDelivr](https://www.jsdelivr.com/package/npm/magica11y) or [unpkg](https://unpkg.com/magica11y@0.2.6/).
+
+```html
+<!-- Loads all the Magica11y modules -->
+<script src="https://cdn.jsdelivr.net/npm/magica11y@latest/dist/magica11y.all.js"></script>
+<!-- Loads only a single Magica11y module -->
+<script src="https://cdn.jsdelivr.net/npm/magica11y@latest/dist/magica11y.prefersReducedMotion.js"></script>
+```
+
+### ⚗️ Usage
+
+Import all `magica11y` modules in your JavaScript code…
 
 ```js
-import prefersReducedMotion, { motionPreferences } from 'magica11y/prefersReducedMotion';
+import { prefersReducedMotion, motionPreferences } from 'magica11y';
 
 const motionPreference = prefersReducedMotion();
 const disableAnimations = motionPreference === motionPreferences.REDUCE;
 ```
 
-You can also install `magica11y` from a CDN, such as [jsDelivr](https://www.jsdelivr.com/package/npm/magica11y) or [unpkg](https://unpkg.com/magica11y@0.2.6/).
-
-Load the `magica11y` via a `<script>` tag…
+If you installed `magica11y` via a `<script>` tag, then…
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/magica11y@latest/dist/prefersReducedMotion.min.js"></script>
+<script>
+  // If you installed all the Magica11y modules via `magica11y.all.js`, then…
+  const motionPreference = window.magica11y.all.prefersReducedMotion();
+
+  // If you installed only a single Magica11y module via `magica11y.prefersReducedMotion.js`, then…
+  const motionPreference = window.magica11y.prefersReducedMotion();
+</script>
 ```
-
-… and use it in JavaScript as…
-
-```js
-const motionPreference = window.magica11y.prefersReducedMotion();
-```
-
 
 ## 🗼 API
 
 ### 🎢 `prefersReducedMotion()`
 
-> Detects user’s preferences for reduced motion using CSS3 Media Queries level 5 specification for [`'prefers-reduce-motion'`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion).
-
-#### Usage
+Detects user’s preferences for reduced motion using [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) [level 5 specification](https://drafts.csswg.org/mediaqueries-5) for [`'prefers-reduce-motion'`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion).
 
 ```js
 import prefersReducedMotion, { motionPreferences } from 'magica11y/prefersReducedMotion';

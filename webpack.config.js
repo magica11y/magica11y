@@ -4,11 +4,14 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
+    all: './src',
     prefersReducedMotion: './src/prefersReducedMotion',
   },
   output: {
-    filename: '[name].min.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: 'magica11y.[name].js',
+    library: ['magica11y', '[name]'],
+    libraryTarget: 'umd',
   },
   optimization: {
     minimizer: [
