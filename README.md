@@ -15,7 +15,7 @@ magica11y
 
 Install `magica11y` using `yarn` or `npm`…
 
-```js
+```
 $ yarn add magica11y  # OR
 $ npm install --save magica11y
 ```
@@ -24,14 +24,25 @@ Import `magica11y` utility functions in your JavaScript code…
 
 ```js
 import prefersReducedMotion, { motionPreferences } from 'magica11y/prefersReducedMotion';
-```
 
-You can then use `prefersReducedMotion`…
-
-```js
 const motionPreference = prefersReducedMotion();
 const disableAnimations = motionPreference === motionPreferences.REDUCE;
 ```
+
+You can also install `magica11y` from a CDN, such as [jsDelivr](https://www.jsdelivr.com/package/npm/magica11y) or [unpkg](https://unpkg.com/magica11y@0.2.6/).
+
+Load the `magica11y` via a `<script>` tag…
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/magica11y@latest/dist/prefersReducedMotion.min.js"></script>
+```
+
+… and use it in JavaScript as…
+
+```js
+const motionPreference = window.magica11y.prefersReducedMotion();
+```
+
 
 ## 🗼 API
 
@@ -60,7 +71,7 @@ You can import the [Flow](https://flow.org) types from the provided [libdefs](ht
 
 ```js
 // @flow
-import { type MotionPreference } from 'magica11y/prefersReducedMotion';
+import prefersReducedMotion, { type MotionPreference } from 'magica11y/prefersReducedMotion';
 
 const motionPreference: ?MotionPreference = prefersReducedMotion();
 ```
