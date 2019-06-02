@@ -18,6 +18,7 @@
     "test:coverage": "yarn test -- --coverageReporters=text-lcov | coveralls",
     "prelint": "yarn run typecheck",
     "lint": "eslint '**/*.js'",
+    "lint:fix": "yarn lint -- --fix",
     "typecheck": "flow",
     "preversion": "yarn test"
   },
