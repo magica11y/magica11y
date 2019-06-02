@@ -1,28 +1,38 @@
 // @flow
 
-import { prefersReducedMotion, motionPreferences } from '../../src';
+import { prefersReducedMotion, motionPreferences, type MotionPreference } from '../../src';
 
 import mockWindowMatchMedia from '../mockWindowMatchMedia';
 
 describe('prefersReducedMotion()', () => {
-  it('returns "no-preference" when users has not set preference for reduced motion', () => {
-    window.matchMedia = jest
-      .fn()
-      .mockImplementation(() => mockWindowMatchMedia(true, '(prefers-reduced-motion: no-preference)'));
+  it('returns a motion preference when preference matches', () => {
+    type TestParameter = {|
+      testInput: MotionPreference,
+      expectedOutput: MotionPreference,
+    |};
 
-    const motionPreference = prefersReducedMotion();
+    const testParameters: Array<TestParameter> = [
+      {
+        testInput: motionPreferences.REDUCE,
+        expectedOutput: 'reduce',
+      },
+      {
+        testInput: motionPreferences.NO_PREFERENCE,
+        expectedOutput: 'no-preference',
+      },
+    ];
 
-    expect(motionPreference).toEqual(motionPreferences.NO_PREFERENCE);
-  });
+    testParameters.forEach((testParameter: TestParameter) => {
+      window.matchMedia = jest
+        .fn()
+        .mockImplementation(() => mockWindowMatchMedia(true, `(prefers-reduced-motion: ${testParameter.testInput})`));
 
-  it('returns "reduce" when users has set preference for reduced motion', () => {
-    window.matchMedia = jest
-      .fn()
-      .mockImplementation(() => mockWindowMatchMedia(true, '(prefers-reduced-motion: reduce)'));
+      const motionPreference = prefersReducedMotion();
 
-    const motionPreference = prefersReducedMotion();
+      expect(motionPreference).toEqual(testParameter.expectedOutput);
 
-    expect(motionPreference).toEqual(motionPreferences.REDUCE);
+      window.matchMedia.mockClear();
+    });
   });
 
   it('returns "null" when preference cannot be determined', () => {
