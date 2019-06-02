@@ -87,6 +87,37 @@ const motionPreference: ?MotionPreference = prefersReducedMotion();
 
 🎩 **Note**: `prefersReducedMotion()` returns a [`nullable`](https://flow.org/en/docs/types/primitives/#toc-null-and-void) `MotionPreference` type. So using `?MotionPreference` is recommended.
 
+### 🕯 `lightLevel()`
+
+Detects user’s available light level using the [`'light-level'`](https://drafts.csswg.org/mediaqueries-5/#light-level) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
+
+```js
+import lightLevel, { availableLightLevels } from 'magica11y/lightLevel';
+
+const availableLightLevel = lightLevel();
+const darkMode = availableLightLevel === availableLightLevels.DIM;
+```
+
+The `availableLightLevels` object contains all the possible values supported by the `'light-level'` media query. The table below summarizes them.
+
+| Return value                  | Media query value                                                                      |
+| ----------------------------- | -------------------------------------------------------------------------------------- |
+| `availableLightLevels.NORMAL` | [`'normal'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-normal) |
+| `availableLightLevels.DIM`    | [`'dim'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-dim)       |
+| `availableLightLevels.WASHED` | [`'washed'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-washed) |
+| `null`                        | Preference could not be determined.                                                    |
+
+You can import the [Flow](https://flow.org) types from the provided [libdefs](https://flow.org/en/docs/libdefs) in `/lib`…
+
+```js
+// @flow
+import lightLevel, { type LightLevel } from 'magica11y/lightLevel';
+
+const availableLightLevel: ?LightLevel = lightLevel();
+```
+
+🎩 **Note**: `lightLevel()` returns a [`nullable`](https://flow.org/en/docs/types/primitives/#toc-null-and-void) `LightLevel` type. So using `?LightLevel` is recommended.
+
 #### 📝 Documentation
 
 * [macOS](https://support.apple.com/guide/mac-help/unac089/mac)

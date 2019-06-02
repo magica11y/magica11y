@@ -1,7 +1,8 @@
 // @flow
 
+import lightLevel, { availableLightLevels, type LightLevel } from './lightLevel';
 import prefersReducedMotion, { motionPreferences, type MotionPreference } from './prefersReducedMotion';
 
-export { prefersReducedMotion, motionPreferences };
+export { lightLevel, availableLightLevels, prefersReducedMotion, motionPreferences };
 
-export type { MotionPreference };
+export type { LightLevel, MotionPreference };
