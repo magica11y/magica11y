@@ -66,6 +66,8 @@ const motionPreference = prefersReducedMotion();
 const disableAnimations = motionPreference === motionPreferences.REDUCE;
 ```
 
+The `motionPreferences` object contains all the possible values supported by the [`'prefers-reduce-motion'`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion) media query. The table below summarizes them.
+
 | Return value                      | Media query value                                                                                               |
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `motionPreferences.NO_PREFERENCE` | [`'no-preference'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-no-preference) |
