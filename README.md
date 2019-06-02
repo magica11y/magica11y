@@ -53,9 +53,21 @@ If you installed `magica11y` via a `<script>` tag, then…
 </script>
 ```
 
+For complete usage examples, view the [Magica11y homepage](https://magica11y.github.io)’s [source code](https://github.com/magica11y/magica11y.github.io).
+
 ## 🗼 API
 
+**Magica11y** includes the following modules…
+
+* [`prefersReducedMotion()`](#-prefersreducedmotion)
+* [`lightLevel()`](#-lightlevel)
+
+
 ### 🎢 `prefersReducedMotion()`
+
+> The [`prefers-reduced-motion`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion) media feature is used to detect if the user has requested the system minimize the amount of animation or motion it uses.
+
+#### Usage
 
 Detects user’s preferences for reduced motion using the [`'prefers-reduce-motion'`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
 
@@ -66,13 +78,16 @@ const motionPreference = prefersReducedMotion();
 const disableAnimations = motionPreference === motionPreferences.REDUCE;
 ```
 
-The `motionPreferences` object contains all the possible values supported by the `'prefers-reduce-motion'` media query. The table below summarizes them.
+The `motionPreferences` object contains all the possible values supported by the `'prefers-reduce-motion'` media query…
 
-| Return value                      | Media query value                                                                                               |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `motionPreferences.NO_PREFERENCE` | [`'no-preference'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-no-preference) |
-| `motionPreferences.REDUCE`        | [`'reduce'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-reduce)               |
-| `null`                            | Preference could not be determined.                                                                             |
+* `motionPreferences.NO_PREFERENCE` ([`'no-preference'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-no-preference))
+  > Indicates that the user has made no preference known to the system.
+* `motionPreferences.REDUCE` [`'reduce'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-reduce)
+  > Indicates that user has notified the system that they prefer an interface that minimizes the amount of movement or animation, preferably to the point where all non-essential movement is removed.
+* `null`
+  > The user’s preference could not be determined.
+
+#### Typechecking
 
 You can import the [Flow](https://flow.org) types from the provided [libdefs](https://flow.org/en/docs/libdefs) in `/lib`…
 
@@ -85,7 +100,18 @@ const motionPreference: ?MotionPreference = prefersReducedMotion();
 
 🎩 **Note**: `prefersReducedMotion()` returns a [`nullable`](https://flow.org/en/docs/types/primitives/#toc-null-and-void) `MotionPreference` type. So using `?MotionPreference` is recommended.
 
+#### Further reading
+
+* [macOS](https://support.apple.com/guide/mac-help/unac089/mac)
+* [iOS](https://support.apple.com/en-lamr/HT202655)
+
+---
+
 ### 🕯 `lightLevel()`
+
+> The [`'light-level'`](https://drafts.csswg.org/mediaqueries-5/#light-level) media feature is used to query about the ambient light-level in which the device is used, to allow the author to adjust style of the document in response.
+
+#### ️️Usage
 
 Detects user’s available light level using the [`'light-level'`](https://drafts.csswg.org/mediaqueries-5/#light-level) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
 
@@ -96,14 +122,18 @@ const availableLightLevel = lightLevel();
 const darkMode = availableLightLevel === availableLightLevels.DIM;
 ```
 
-The `availableLightLevels` object contains all the possible values supported by the `'light-level'` media query. The table below summarizes them.
+The `availableLightLevels` object contains all the possible values supported by the `'light-level'` media query…
 
-| Return value                  | Media query value                                                                      |
-| ----------------------------- | -------------------------------------------------------------------------------------- |
-| `availableLightLevels.NORMAL` | [`'normal'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-normal) |
-| `availableLightLevels.DIM`    | [`'dim'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-dim)       |
-| `availableLightLevels.WASHED` | [`'washed'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-washed) |
-| `null`                        | Preference could not be determined.                                                    |
+* `availableLightLevels.NORMAL` [`'normal'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-normal)
+  > The device is used in a environment with a light level in the ideal range for the screen, and which does not necessitate any particular adjustment.
+* `availableLightLevels.DIM` [`'dim'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-dim)
+  > The device is used in a dim environment, where excessive contrast and brightness would be distracting or uncomfortable to the reader. For example: night time, or a dimly illuminated indoor environment.
+* `availableLightLevels.WASHED` [`'washed'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-washed)
+  > The device is used in an exceptionally bright environment, causing the screen to be washed out and difficult to read. For example: bright daylight.
+* `null`
+  > The user’s preference could not be determined.
+
+#### Typechecking
 
 You can import the [Flow](https://flow.org) types from the provided [libdefs](https://flow.org/en/docs/libdefs) in `/lib`…
 
@@ -116,11 +146,8 @@ const availableLightLevel: ?LightLevel = lightLevel();
 
 🎩 **Note**: `lightLevel()` returns a [`nullable`](https://flow.org/en/docs/types/primitives/#toc-null-and-void) `LightLevel` type. So using `?LightLevel` is recommended.
 
-#### 📝 Documentation
-
-* [macOS](https://support.apple.com/guide/mac-help/unac089/mac)
-* [iOS](https://support.apple.com/en-lamr/HT202655)
+---
 
 ## :scroll: License
 
-See [LICENSE.md](LICENSE.md).
+MIT. See [LICENSE.md](LICENSE.md) for more details.
