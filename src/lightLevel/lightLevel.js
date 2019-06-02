@@ -1,23 +1,13 @@
 // @flow
 
-export const availableLightLevels: {|
-  NORMAL: string,
-  DIM: string,
-  WASHED: string,
-|} = Object.freeze({
-  NORMAL: 'normal',
-  DIM: 'dim',
-  WASHED: 'washed',
-});
+import matchUserPreference from '../matchUserPreference';
 
-export type LightLevel = $Values<typeof availableLightLevels>;
+import { type LightLevel } from './availableLightLevels';
 
 // See https://github.com/magica11y/magica11y/issues/1
 const lightLevelsValues: Array<LightLevel> = ['normal', 'dim', 'washed'];
 
-const getMediaQueryString = (lightLevel: LightLevel): string => {
-  return `(light-level: ${lightLevel})`;
-};
+const lightLevelMediaQuery = 'light-level';
 
 /**
  * Detects user’s preferences for light level
@@ -27,12 +17,9 @@ const getMediaQueryString = (lightLevel: LightLevel): string => {
  * @see https://drafts.csswg.org/mediaqueries-5/#light-level
  */
 const lightLevel = (): ?LightLevel => {
-  const matchedLightLevel: ?LightLevel = lightLevelsValues.find((lightLevelValue: LightLevel) => {
-    const mediaQueryString = getMediaQueryString(lightLevelValue);
-    const mediaQuery: MediaQueryList = window.matchMedia(mediaQueryString);
-
-    return mediaQuery.media === mediaQueryString && mediaQuery.matches;
-  });
+  const matchedLightLevel: ?LightLevel = lightLevelsValues.find((lightLevelValue: LightLevel) =>
+    matchUserPreference(lightLevelMediaQuery, lightLevelValue),
+  );
 
   if (matchedLightLevel) {
     return matchedLightLevel;

@@ -1,6 +1,7 @@
 // @flow
 
-import prefersReducedMotion, { motionPreferences, type MotionPreference } from './prefersReducedMotion';
+import prefersReducedMotion from './prefersReducedMotion';
+import motionPreferences, { type MotionPreference } from './motionPreferences';
 
 export default prefersReducedMotion;
 

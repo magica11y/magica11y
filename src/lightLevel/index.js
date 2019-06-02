@@ -1,6 +1,7 @@
 // @flow
 
-import lightLevel, { availableLightLevels, type LightLevel } from './lightLevel';
+import lightLevel from './lightLevel';
+import availableLightLevels, { type LightLevel } from './availableLightLevels';
 
 export default lightLevel;
 

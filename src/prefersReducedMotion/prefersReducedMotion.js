@@ -1,21 +1,13 @@
 // @flow
 
-export const motionPreferences: {|
-  REDUCE: string,
-  NO_PREFERENCE: string,
-|} = Object.freeze({
-  REDUCE: 'reduce',
-  NO_PREFERENCE: 'no-preference',
-});
+import matchUserPreference from '../matchUserPreference';
 
-export type MotionPreference = $Values<typeof motionPreferences>;
+import { type MotionPreference } from './motionPreferences';
 
 // See https://github.com/magica11y/magica11y/issues/1
 const motionPreferencesArray: Array<MotionPreference> = ['reduce', 'no-preference'];
 
-const getMediaQueryString = (motionPreference: MotionPreference): string => {
-  return `(prefers-reduced-motion: ${motionPreference})`;
-};
+const prefersReducedMotionMediaQuery = 'prefers-reduced-motion';
 
 /**
  * Detects user’s preferences for reduced motion
@@ -25,13 +17,8 @@ const getMediaQueryString = (motionPreference: MotionPreference): string => {
  * @see https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion
  */
 const prefersReducedMotion = (): ?MotionPreference => {
-  const matchedMotionPreference: ?MotionPreference = motionPreferencesArray.find(
-    (motionPreference: MotionPreference) => {
-      const mediaQueryString = getMediaQueryString(motionPreference);
-      const mediaQuery: MediaQueryList = window.matchMedia(mediaQueryString);
-
-      return mediaQuery.media === mediaQueryString && mediaQuery.matches;
-    },
+  const matchedMotionPreference: ?MotionPreference = motionPreferencesArray.find((motionPreference: MotionPreference) =>
+    matchUserPreference(prefersReducedMotionMediaQuery, motionPreference),
   );
 
   if (matchedMotionPreference) {
