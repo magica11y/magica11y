@@ -4,6 +4,8 @@ magica11y
 
 [![Travis](https://img.shields.io/travis/magica11y/magica11y.svg?style=for-the-badge "Build status")](https://travis-ci.org/magica11y/magica11y)
 [![npm](https://img.shields.io/npm/v/magica11y.svg?style=for-the-badge "NPM")](https://www.npmjs.com/package/magica11y)
+[![Bundlephobia](https://img.shields.io/bundlephobia/min/magica11y.svg?style=for-the-badge "Bundle size (minified)")](https://bundlephobia.com/result?p=magica11y)
+[![Bundlephobia](https://img.shields.io/bundlephobia/minzip/magica11y.svg?style=for-the-badge "Bundle size (minified+gzipped)")](https://bundlephobia.com/result?p=magica11y)
 [![Coveralls](https://img.shields.io/coveralls/magica11y/magica11y.svg?style=for-the-badge "Test coverage status")](https://coveralls.io/r/magica11y/magica11y)
 [![David](https://img.shields.io/david/magica11y/magica11y.svg?style=for-the-badge "Dependencies")](https://david-dm.org/magica11y/magica11y)
 [![David](https://img.shields.io/david/dev/magica11y/magica11y.svg?style=for-the-badge "Dev Dependencies")](https://david-dm.org/magica11y/magica11y?type=dev)
