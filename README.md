@@ -158,4 +158,4 @@ See [LICENSE.md](LICENSE.md) for more details.
 
 Handcrafted with ❤️ by [Rishabh Rao](https://github.com/rishabhsrao)
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/rishabhsrao.svg?label=%40rishabhsrao&style=social)](https://twitter.com/rishabhsrao)
+[![Twitter Follow](https://img.shields.io/twitter/follow/rishabhsrao.svg?label=%40rishabhsrao&style=social)](https://twitter.com/rishabhsrao) [![Greenkeeper badge](https://badges.greenkeeper.io/magica11y/magica11y.svg)](https://greenkeeper.io/)
