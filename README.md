@@ -57,7 +57,7 @@ If you installed `magica11y` via a `<script>` tag, then…
 
 ### 🎢 `prefersReducedMotion()`
 
-Detects user’s preferences for reduced motion using [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) [level 5 specification](https://drafts.csswg.org/mediaqueries-5) for [`'prefers-reduce-motion'`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion).
+Detects user’s preferences for reduced motion using the [`'prefers-reduce-motion'`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
 
 ```js
 import prefersReducedMotion, { motionPreferences } from 'magica11y/prefersReducedMotion';
@@ -66,15 +66,13 @@ const motionPreference = prefersReducedMotion();
 const disableAnimations = motionPreference === motionPreferences.REDUCE;
 ```
 
-The `motionPreferences` object contains all the possible values supported by the [`'prefers-reduce-motion'`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion) media query. The table below summarizes them.
+The `motionPreferences` object contains all the possible values supported by the `'prefers-reduce-motion'` media query. The table below summarizes them.
 
 | Return value                      | Media query value                                                                                               |
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `motionPreferences.NO_PREFERENCE` | [`'no-preference'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-no-preference) |
 | `motionPreferences.REDUCE`        | [`'reduce'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-reduce)               |
 | `null`                            | Preference could not be determined.                                                                             |
-
-#### ☔️ Typechecking
 
 You can import the [Flow](https://flow.org) types from the provided [libdefs](https://flow.org/en/docs/libdefs) in `/lib`…
 
