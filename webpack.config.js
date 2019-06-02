@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     all: './src',
     prefersReducedMotion: './src/prefersReducedMotion',
+    lightLevel: './src/lightLevel',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
