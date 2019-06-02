@@ -80,9 +80,9 @@ const disableAnimations = motionPreference === motionPreferences.REDUCE;
 
 The `motionPreferences` object contains all the possible values supported by the `'prefers-reduce-motion'` media query…
 
-* `motionPreferences.NO_PREFERENCE` ([`'no-preference'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-no-preference))
+* `motionPreferences.NO_PREFERENCE` (spec: [`'no-preference'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-no-preference))
   > Indicates that the user has made no preference known to the system.
-* `motionPreferences.REDUCE` [`'reduce'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-reduce)
+* `motionPreferences.REDUCE` (spec: [`'reduce'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-motion-reduce))
   > Indicates that user has notified the system that they prefer an interface that minimizes the amount of movement or animation, preferably to the point where all non-essential movement is removed.
 * `null`
   > The user’s preference could not be determined.
@@ -124,11 +124,11 @@ const darkMode = availableLightLevel === availableLightLevels.DIM;
 
 The `availableLightLevels` object contains all the possible values supported by the `'light-level'` media query…
 
-* `availableLightLevels.NORMAL` [`'normal'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-normal)
+* `availableLightLevels.NORMAL` (spec: [`'normal'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-normal))
   > The device is used in a environment with a light level in the ideal range for the screen, and which does not necessitate any particular adjustment.
-* `availableLightLevels.DIM` [`'dim'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-dim)
+* `availableLightLevels.DIM` (spec: [`'dim'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-dim))
   > The device is used in a dim environment, where excessive contrast and brightness would be distracting or uncomfortable to the reader. For example: night time, or a dimly illuminated indoor environment.
-* `availableLightLevels.WASHED` [`'washed'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-washed)
+* `availableLightLevels.WASHED` (spec: [`'washed'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-washed))
   > The device is used in an exceptionally bright environment, causing the screen to be washed out and difficult to read. For example: bright daylight.
 * `null`
   > The user’s preference could not be determined.
