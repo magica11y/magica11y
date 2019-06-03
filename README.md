@@ -11,6 +11,7 @@ magica11y
 [![David](https://img.shields.io/david/dev/magica11y/magica11y.svg?style=for-the-badge "Dev Dependencies")](https://david-dm.org/magica11y/magica11y?type=dev)
 [![node](https://img.shields.io/node/v/magica11y.svg?style=for-the-badge "Node engine")](https://www.npmjs.com/package/magica11y)
 [![License](https://img.shields.io/github/license/magica11y/magica11y.svg?style=for-the-badge "MIT license")](LICENSE.md)
+![Greenkeeper](https://badges.greenkeeper.io/magica11y/magica11y.svg?style=flat-square "Greenkeeper")
 
 ## 🚀 Getting started
 
