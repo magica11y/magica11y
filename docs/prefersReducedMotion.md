@@ -1,3 +1,7 @@
+---
+theme: jekyll-theme-modernist
+---
+
 # 🎢 `prefersReducedMotion()`
 
 > The [`prefers-reduced-motion`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion) media feature is used to detect if the user has requested the system minimize the amount of animation or motion it uses.

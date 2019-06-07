@@ -1,3 +1,7 @@
+---
+theme: jekyll-theme-modernist
+---
+
 # 🕯 `lightLevel()`
 
 > The [`'light-level'`](https://drafts.csswg.org/mediaqueries-5/#light-level) media feature is used to query about the ambient light-level in which the device is used, to allow the author to adjust style of the document in response.
