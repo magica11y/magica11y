@@ -56,7 +56,6 @@ If you installed `magica11y` via a `<script>` tag, then…
 </script>
 ```
 
-For complete usage examples, view the [Magica11y homepage](https://magica11y.github.io)’s [source code](https://github.com/magica11y/magica11y.github.io).
 
 ## 🗼 API
 
