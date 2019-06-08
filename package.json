@@ -2,7 +2,7 @@
   "name": "magica11y",
   "homepage": "https://magica11y.github.io",
   "version": "1.0.0",
-  "description": "A suite of utility functions to detect accessibility features desired by the user",
+  "description": "A suite of utility functions to detect accessibility features desired by the user and environment conditions of the device",
   "module": "src/index.js",
   "browser": "dist/magica11y.all.js",
   "scripts": {

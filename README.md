@@ -1,6 +1,6 @@
 magica11y
 =========
-> A suite of utility functions to detect accessibility features desired by the user
+> A suite of utility functions to detect accessibility features desired by the user and environment conditions of the device.
 
 [![Travis](https://img.shields.io/travis/magica11y/magica11y.svg?style=for-the-badge "Build status")](https://travis-ci.org/magica11y/magica11y)
 [![npm](https://img.shields.io/npm/v/magica11y.svg?style=for-the-badge "NPM")](https://www.npmjs.com/package/magica11y)
@@ -16,6 +16,8 @@ magica11y
 ---
 
 # ✨ Introduction
+
+**Magica11y** provides a suite of utility functions to detect accessibility features desired by the user and environment conditions of the device.
 
 **Magica11y** is awesome because…
   * It has zero dependencies.
