@@ -13,51 +13,57 @@ magica11y
 [![License](https://img.shields.io/github/license/magica11y/magica11y.svg?style=for-the-badge "MIT license")](LICENSE.md)
 ![Greenkeeper](https://badges.greenkeeper.io/magica11y/magica11y.svg?style=flat-square "Greenkeeper")
 
-## 🚀 Getting started
+---
 
-### 🏗 Installation
+# ✨ Introduction
 
-Install `magica11y` using `yarn` or `npm`…
+**Magica11y** is awesome because…
+  * It has zero dependencies.
+  * It’s lightweight just under [1KB (minified and gzipped)](https://bundlephobia.com/result?p=magica11y).
+  * It uses the [`window.matchMedia`](https://developer.mozilla.org/docs/Web/API/Window/matchMedia) API underneath.
+  * It’s optimized for performance; all the module functions are designed in such that they exit early.
+  * It provides a clean and semantic API to work with.
+
+# 🚀 Getting started
+
+## 🏗 Installation
+
+Install **Magica11y** using `yarn` or `npm`…
 
 ```
 $ yarn add magica11y  # OR
 $ npm install --save magica11y
 ```
 
-You can also install `magica11y` from a CDN, such as [jsDelivr](https://www.jsdelivr.com/package/npm/magica11y) or [unpkg](https://unpkg.com/magica11y@0.2.6/).
+You can also install **Magica11y** from a CDN, such as [jsDelivr](https://www.jsdelivr.com/package/npm/magica11y) or [unpkg](https://unpkg.com/magica11y/).
 
 ```html
-<!-- Loads all the Magica11y modules -->
-<script src="https://cdn.jsdelivr.net/npm/magica11y@latest/dist/magica11y.all.js"></script>
-<!-- Loads only a single Magica11y module -->
 <script src="https://cdn.jsdelivr.net/npm/magica11y@latest/dist/magica11y.prefersReducedMotion.js"></script>
 ```
 
-### ⚗️ Usage
+## ⚗️ Usage
 
-Import all `magica11y` modules in your JavaScript code…
+Import **Magica11y** module in your JavaScript…
 
 ```js
-import { prefersReducedMotion, motionPreferences } from 'magica11y';
+import prefersReducedMotion, { motionPreferences } from 'magica11y/prefersReducedMotion';
 
 const motionPreference = prefersReducedMotion();
 const disableAnimations = motionPreference === motionPreferences.REDUCE;
 ```
 
-If you installed `magica11y` via a `<script>` tag, then…
+If you installed **Magica11y** via a `<script>` tag, then `magica11y` is available on the `window` object…
 
 ```html
 <script>
-  // If you installed all the Magica11y modules via `magica11y.all.js`, then…
-  const motionPreference = window.magica11y.all.prefersReducedMotion();
-
-  // If you installed only a single Magica11y module via `magica11y.prefersReducedMotion.js`, then…
   const motionPreference = window.magica11y.prefersReducedMotion();
+  const disableAnimations = motionPreference === motionPreferences.REDUCE;
 </script>
 ```
 
+---
 
-## 🗼 API
+# 🗼 API documentation
 
 **Magica11y** includes the following modules…
 
@@ -65,13 +71,13 @@ If you installed `magica11y` via a `<script>` tag, then…
 * [`lightLevel()`](#-lightlevel)
 
 
-### 🎢 `prefersReducedMotion()`
+## 🎢 `prefersReducedMotion()`
 
 > The [`prefers-reduced-motion`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion) media feature is used to detect if the user has requested the system minimize the amount of animation or motion it uses.
 
-#### Usage
-
 Detects user’s preferences for reduced motion using the [`'prefers-reduce-motion'`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
+
+### ⚗️ Usage
 
 ```js
 import prefersReducedMotion, { motionPreferences } from 'magica11y/prefersReducedMotion';
@@ -89,39 +95,26 @@ The `motionPreferences` object contains all the possible values supported by the
 * `null`
   > The user’s preference could not be determined.
 
-#### Typechecking
-
-You can import the [Flow](https://flow.org) types from the provided [libdefs](https://flow.org/en/docs/libdefs) in `/lib`…
-
-```js
-// @flow
-import prefersReducedMotion, { type MotionPreference } from 'magica11y/prefersReducedMotion';
-
-const motionPreference: ?MotionPreference = prefersReducedMotion();
-```
-
-🎩 **Note**: `prefersReducedMotion()` returns a [`nullable`](https://flow.org/en/docs/types/primitives/#toc-null-and-void) `MotionPreference` type. So using `?MotionPreference` is recommended.
-
-#### Further reading
+### 📚 Further reading
 
 * [macOS](https://support.apple.com/guide/mac-help/unac089/mac)
 * [iOS](https://support.apple.com/en-lamr/HT202655)
 
 ---
 
-### 🕯 `lightLevel()`
+## 🕯 `lightLevel()`
+
+Detects user’s available light level using the [`'light-level'`](https://drafts.csswg.org/mediaqueries-5/#light-level) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
 
 > The [`'light-level'`](https://drafts.csswg.org/mediaqueries-5/#light-level) media feature is used to query about the ambient light-level in which the device is used, to allow the author to adjust style of the document in response.
 
-#### ️️Usage
-
-Detects user’s available light level using the [`'light-level'`](https://drafts.csswg.org/mediaqueries-5/#light-level) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
+### ⚗️ ️️Usage
 
 ```js
 import lightLevel, { availableLightLevels } from 'magica11y/lightLevel';
 
 const availableLightLevel = lightLevel();
-const darkMode = availableLightLevel === availableLightLevels.DIM;
+const enableDarkMode = availableLightLevel === availableLightLevels.DIM;
 ```
 
 The `availableLightLevels` object contains all the possible values supported by the `'light-level'` media query…
@@ -135,22 +128,31 @@ The `availableLightLevels` object contains all the possible values supported by 
 * `null`
   > The user’s preference could not be determined.
 
-#### Typechecking
+---
 
-You can import the [Flow](https://flow.org) types from the provided [libdefs](https://flow.org/en/docs/libdefs) in `/lib`…
+# 🏁 Typechecking
+
+You can import the [Flow](https://flow.org) types from the provided [libdefs](https://flow.org/en/docs/libdefs) in `/lib` by configuring them in your `.flowconfig`…
+
+```
+[libs]
+node_modules/magica11y/lib
+```
+
+Now, you can use **Magica11y**’s Flow types as usual. Here’s an example with **Magica11y**’s `prefersReducedMotion` module…
 
 ```js
 // @flow
-import lightLevel, { type LightLevel } from 'magica11y/lightLevel';
+import prefersReducedMotion, { type MotionPreference } from 'magica11y/prefersReducedMotion';
 
-const availableLightLevel: ?LightLevel = lightLevel();
+const motionPreference: ?MotionPreference = prefersReducedMotion();
 ```
 
-🎩 **Note**: `lightLevel()` returns a [`nullable`](https://flow.org/en/docs/types/primitives/#toc-null-and-void) `LightLevel` type. So using `?LightLevel` is recommended.
+🎩 **Note**: All the **Magica11y** module functions (e.g. `prefersReducedMotion()`) return a [`nullable`](https://flow.org/en/docs/types/primitives/#toc-null-and-void) type (e.g. `MotionPreference`). So using the `?` prefix to indicate nullable types is recommended (e.g. `?MotionPreference`).
 
 ---
 
-## :scroll: License
+# 📜 License
 
 [![License](https://img.shields.io/github/license/magica11y/magica11y.svg?style=for-the-badge "MIT license")](LICENSE.md)
 
