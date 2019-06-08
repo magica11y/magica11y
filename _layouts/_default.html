@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#f4d061">
+
+  <link rel="stylesheet" type="text" href="https://cdn.jsdelivr.net/gh/forestryio/ubuild-blocks@1.0.0/dist/css/ubuild.css" />
+</head>
+
+<body>
+  <!--[if IE]>
+    <p>You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <section class="block block-hero-2">
+    <div class="container">
+      <div class="columns">
+        <div class="column text">
+          <h1>{{ site.title }}</h1>
+          <p>{{ site.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ content }}
+
+  <script src="https://cdn.jsdelivr.net/npm/magica11y@latest/dist/magica11y.all.min.js"></script>
+</body>
+
+</html>
