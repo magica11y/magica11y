@@ -4,7 +4,7 @@ Magica11y
 =========
 > A suite of utility functions to detect accessibility features desired by the user and environment conditions of the device.
 
-[![Travis](https://img.shields.io/travis/magica11y/magica11y.svg?style=for-the-badge "Build status")](https://travis-ci.org/magica11y/magica11y)
+[![Travis](https://img.shields.io/travis/com/magica11y/magica11y.svg?style=for-the-badge)](https://travis-ci.com/magica11y/magica11y)
 [![npm](https://img.shields.io/npm/v/magica11y.svg?style=for-the-badge "NPM")](https://www.npmjs.com/package/magica11y)
 [![Bundlephobia](https://img.shields.io/bundlephobia/min/magica11y.svg?style=for-the-badge "Bundle size (minified)")](https://bundlephobia.com/result?p=magica11y)
 [![Bundlephobia](https://img.shields.io/bundlephobia/minzip/magica11y.svg?style=for-the-badge "Bundle size (minified+gzipped)")](https://bundlephobia.com/result?p=magica11y)
