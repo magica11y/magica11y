@@ -1,4 +1,4 @@
-![Magica11y cover](assets/Magica11y-cover.png "Magica11y cover")
+![Magica11y cover](assets/img/Magica11y-cover.png "Magica11y cover")
 
 Magica11y
 =========
