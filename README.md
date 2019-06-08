@@ -28,10 +28,6 @@ Magica11y
   * It’s optimized for performance; all the module functions are designed in such a way that they exit early.
   * It provides a clean and semantic API to work with.
 
-<div id="live-demo">
-  <!-- Live-demo dynamically generated on magica11y.github.io/magica11y -->
-</div>
-
 # 🚀 Getting started
 
 ## 🏗 Installation
@@ -169,18 +165,3 @@ See [LICENSE.md](LICENSE.md) for more details.
 Handcrafted with ❤️ by [Rishabh Rao](https://github.com/rishabhsrao).
 
 [![Twitter](https://img.shields.io/twitter/follow/rishabhsrao.svg?style=social)](https://twitter.com/rishabhsrao)
-
----
-
-<small>The following section includes **Magica11y** for showing a live-demo on <a href="https://magica11y.github.io/magica11y">magica11y.github.io/magica11y</a>.</small>
-
-<script src="https://cdn.jsdelivr.net/npm/magica11y@latest/dist/magica11y.all.min.js"></script>
-
-<script>
-(function () {
-  'use strict';
-
-  var prefersReducedMotion = window.magica11y.all.prefersReducedMotion();
-})();
-  console.log('prefersReducedMotion is', prefersReducedMotion);
-</script>
