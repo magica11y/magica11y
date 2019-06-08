@@ -24,18 +24,19 @@
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-
-      <details>
-        <summary class="btn">Live demo</summary>
-        <details-dialog aria-label="Live demo dialog">
-          <h1>Live demo</h1>
-          <p>Coming soon…</p>
-          <button class="btn" data-close-dialog>Close</button>
-        </details-dialog>
-      </details>
     </header>
 
     <main id="content" class="main-content" role="main">
+      <div id="live-demo">
+        <p>Your current preferences are…</p>
+        <ul>
+          <li>
+            <p><strong>prefersReducedMotion()</strong>: <span id="prefersReducedMotion"></span></p>
+            <p><strong>lightLevel()</strong>: <span id="lightLevel"></span></p>
+          </li>
+        </ul>
+      </div>
+
       {{ content }}
 
       <footer class="site-footer">
@@ -46,22 +47,16 @@
       </footer>
     </main>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/@github/details-dialog-element@3.0.4/dist/index.umd.js"></script>
-    <script async defer src="https://cdn.jsdelivr.net/npm/magica11y@latest/dist/magica11y.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/magica11y@latest/dist/magica11y.all.min.js"></script>
     <script>
       (function () {
         'use strict';
 
-        var liveDemoElement = document.querySelector('#live-demo');
+        var prefersReducedMotionElement = document.querySelector('#prefersReducedMotion');
+        prefersReducedMotionElement.textContent = window.magica11y.all.prefersReducedMotion();
 
-        var apiMethods = [
-          'prefersReducedMotion',
-          'lightLevel'
-        ];
-
-        apiMethods.forEach(function(apiMethod) {
-          console.log(apiMethod, window.magica11y.all[apiMethod]());
-        });
+        var lightLevelElement = document.querySelector('#lightLevel');
+        lightLevelElement.textContent = window.magica11y.all.lightLevel();
       })();
     </script>
   </body>
