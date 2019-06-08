@@ -2,7 +2,7 @@ language: node_js
 node_js: '10'
 cache: yarn
 before_install:
-  - npm config set '//registry.npmjs.org/:_authToken' "\${NPM_TOKEN}"
+- echo "//registry.npmjs.org/:_authToken=\$NPM_TOKEN" > ~/.npmrc
 script:
 - yarn ci
 deploy:
