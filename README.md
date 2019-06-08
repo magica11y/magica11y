@@ -23,7 +23,7 @@ magica11y
   * It has zero dependencies.
   * It’s lightweight just under [1KB (minified and gzipped)](https://bundlephobia.com/result?p=magica11y).
   * It uses the [`window.matchMedia`](https://developer.mozilla.org/docs/Web/API/Window/matchMedia) API underneath.
-  * It’s optimized for performance; all the module functions are designed in such that they exit early.
+  * It’s optimized for performance; all the module functions are designed in such a way that they exit early.
   * It provides a clean and semantic API to work with.
 
 # 🚀 Getting started
