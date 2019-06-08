@@ -1,4 +1,6 @@
-magica11y
+![Magica11y cover](./.github/Magica11y-cover.png "Magica11y cover")
+
+Magica11y
 =========
 > A suite of utility functions to detect accessibility features desired by the user and environment conditions of the device.
 
