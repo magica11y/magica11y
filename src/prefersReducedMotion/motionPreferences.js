@@ -1,11 +1,11 @@
 // @flow
 
 const motionPreferences: {|
-  REDUCE: string,
   NO_PREFERENCE: string,
+  REDUCE: string,
 |} = Object.freeze({
-  REDUCE: 'reduce',
   NO_PREFERENCE: 'no-preference',
+  REDUCE: 'reduce',
 });
 
 export type MotionPreference = $Values<typeof motionPreferences>;
