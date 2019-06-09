@@ -1,1 +1,9 @@
-theme: jekyll-theme-cayman
+remote_theme: magica11y/magica11y-jekyll-theme
+
+title: "Magica11y"
+subtitle: ""
+description: "A suite of utility functions to detect accessibility features desired by the user and environment conditions of the device."
+
+magica11y_api_methods:
+  - prefersReducedMotion
+  - lightLevel
