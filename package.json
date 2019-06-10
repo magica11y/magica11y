@@ -29,9 +29,13 @@
   "keywords": [
     "a11y",
     "accessibility",
-    "css-mediaquery",
+    "css",
+    "mediaquery",
+    "level-5",
     "matchmedia",
-    "prefers-reduced-motion"
+    "prefers-reduced-motion",
+    "light-level",
+    "environment-blending"
   ],
   "engines": {
     "node": ">=10",

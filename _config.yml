@@ -7,3 +7,4 @@ description: "A suite of utility functions to detect accessibility features desi
 magica11y_api_methods:
   - prefersReducedMotion
   - lightLevel
+  - environmentBlending

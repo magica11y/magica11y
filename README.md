@@ -134,6 +134,34 @@ The `availableLightLevels` object contains all the possible values supported by 
 
 ---
 
+## 🕯 `environmentBlending()`
+
+Detects the characteristics of the user’s display using [`'environment-blending'`](https://drafts.csswg.org/mediaqueries-5/#environment-blending) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
+
+> The [`'environment-blending'`](https://drafts.csswg.org/mediaqueries-5/#environment-blending) media feature is used to query the characteristics of the user’s display so the author can adjust the style of the document. An author might choose to adjust the visuals and/or layout of the page depending on the display technology to increase the appeal or improve legibility.
+
+### ⚗️ ️️Usage
+
+```js
+import environmentBlending, { availableDisplayBlends } from 'magica11y/environmentBlending';
+
+const availableDisplayBlend = environmentBlending();
+const enableDarkMode = availableDisplayBlend === availableDisplayBlends.ADDITIVE;
+```
+
+The `availableDisplayBlends` object contains all the possible values supported by the `'environment-blending'` media query…
+
+* `availableDisplayBlends.OPAQUE` (spec: [`'opaque'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-environment-blending-opaque))
+  > The document is rendered on an opaque medium, such as a traditional monitor or paper. Black is dark and white is 100% light.
+* `availableDisplayBlends.ADDITIVE` (spec: [`'additive'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-environment-blending-additive))
+  > The display blends the colors of the canvas with the real world using additive mixing. Black is fully transparent and white is 100% light. For example: a head-up display in a car.
+* `availableDisplayBlends.SUBTRACTIVE` (spec: [`'subtractive'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-environment-blending-subtractive))
+  > The display blends the colors of the canvas with the real world using subtractive mixing. White is fully transparent and dark colors have the most contrast. For example: an LCD display embedded in a bathroom mirror.
+* `null`
+  > The user’s preference could not be determined.
+
+---
+
 # 🏁 Typechecking
 
 You can import the [Flow](https://flow.org) types from the provided [libdefs](https://flow.org/en/docs/libdefs) in `/lib` by configuring them in your `.flowconfig`…
