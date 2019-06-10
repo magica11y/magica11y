@@ -5,7 +5,7 @@ import { prefersReducedMotion, motionPreferences, type MotionPreference } from '
 import mockWindowMatchMedia from '../mockWindowMatchMedia';
 
 describe('prefersReducedMotion()', () => {
-  it('returns a motion preference when preference matches', () => {
+  it('returns a motion preference when media-query matches', () => {
     type TestParameter = {|
       testInput: MotionPreference,
       expectedOutput: MotionPreference,

@@ -2,11 +2,10 @@
 
 import matchUserPreference from '../matchUserPreference';
 
-import { type MotionPreference } from './motionPreferences';
+import motionPreferences, { type MotionPreference } from './motionPreferences';
 
 // See https://github.com/magica11y/magica11y/issues/1
-const motionPreferencesArray: Array<MotionPreference> = ['no-preference', 'reduce'];
-
+const motionPreferenceValues: Array<MotionPreference> = [motionPreferences.NO_PREFERENCE, motionPreferences.REDUCE];
 const prefersReducedMotionMediaQuery = 'prefers-reduced-motion';
 
 /**
@@ -17,8 +16,9 @@ const prefersReducedMotionMediaQuery = 'prefers-reduced-motion';
  * @see https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion
  */
 const prefersReducedMotion = (): ?MotionPreference => {
-  const matchedMotionPreference: ?MotionPreference = motionPreferencesArray.find((motionPreference: MotionPreference) =>
-    matchUserPreference(prefersReducedMotionMediaQuery, motionPreference),
+  const matchedMotionPreference: ?MotionPreference = motionPreferenceValues.find(
+    (motionPreferenceValue: MotionPreference) =>
+      matchUserPreference(prefersReducedMotionMediaQuery, motionPreferenceValue),
   );
 
   if (matchedMotionPreference) {

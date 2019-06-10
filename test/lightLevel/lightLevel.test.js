@@ -5,7 +5,7 @@ import { lightLevel, availableLightLevels, type LightLevel } from '../../src';
 import mockWindowMatchMedia from '../mockWindowMatchMedia';
 
 describe('lightLevel()', () => {
-  it('returns a light-level preference when preference matches', () => {
+  it('returns an available light-level when media-query matches', () => {
     type TestParameter = {|
       testInput: LightLevel,
       expectedOutput: LightLevel,
@@ -42,8 +42,8 @@ describe('lightLevel()', () => {
   it('returns "null" when preference cannot be determined', () => {
     window.matchMedia = jest.fn().mockImplementation(() => mockWindowMatchMedia(false, 'not all'));
 
-    const lightLevelPreference = lightLevel();
+    const availableLightLevel = lightLevel();
 
-    expect(lightLevelPreference).toEqual(null);
+    expect(availableLightLevel).toEqual(null);
   });
 });
