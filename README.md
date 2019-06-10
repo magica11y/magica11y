@@ -73,6 +73,7 @@ If you installed **Magica11y** via a `<script>` tag, then `magica11y` is availab
 
 * [`prefersReducedMotion()`](#-prefersreducedmotion)
 * [`lightLevel()`](#-lightlevel)
+* [`environmentBlending()`](#-environmentblending)
 
 
 ## 🎢 `prefersReducedMotion()`
