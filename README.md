@@ -134,7 +134,7 @@ The `availableLightLevels` object contains all the possible values supported by 
 
 ---
 
-## 🕯 `environmentBlending()`
+## 📺 `environmentBlending()`
 
 Detects the characteristics of the user’s display using [`'environment-blending'`](https://drafts.csswg.org/mediaqueries-5/#environment-blending) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
 
