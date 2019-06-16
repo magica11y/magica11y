@@ -11,8 +11,6 @@ const lightLevelsValues: Array<LightLevel> = [
   availableLightLevels.WASHED,
 ];
 
-const lightLevelMediaQuery = 'light-level';
-
 /**
  * Detects the ambient light-level in which the device is used
  * using CSS3 Media Queries level 5 specification for `'light-level'`.
@@ -22,7 +20,7 @@ const lightLevelMediaQuery = 'light-level';
  */
 const lightLevel = (): ?LightLevel => {
   const matchedLightLevel: ?LightLevel = lightLevelsValues.find((lightLevelValue: LightLevel) =>
-    matchUserPreference(lightLevelMediaQuery, lightLevelValue),
+    matchUserPreference('light-level', lightLevelValue),
   );
 
   if (matchedLightLevel) {

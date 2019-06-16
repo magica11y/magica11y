@@ -11,8 +11,6 @@ const displayBlendValues: Array<DisplayBlend> = [
   availableDisplayBlends.SUBTRACTIVE,
 ];
 
-const environmentBlendingMediaQuery = 'environment-blending';
-
 /**
  * Detects the characteristics of the user’s display
  * using CSS3 Media Queries level 5 specification for `'environment-blending'`.
@@ -22,7 +20,7 @@ const environmentBlendingMediaQuery = 'environment-blending';
  */
 const environmentBlending = (): ?DisplayBlend => {
   const matchedDisplayBlend: ?DisplayBlend = displayBlendValues.find((displayBlendValue: DisplayBlend) =>
-    matchUserPreference(environmentBlendingMediaQuery, displayBlendValue),
+    matchUserPreference('environment-blending', displayBlendValue),
   );
 
   if (matchedDisplayBlend) {
