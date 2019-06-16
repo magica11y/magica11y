@@ -22,11 +22,17 @@ Magica11y
 **Magica11y** provides a suite of utility functions to detect "user-preference" and "environment" media features.
 
 **Magica11y** is awesome because…
-  * It has zero dependencies.
-  * It’s lightweight just under [1KB (minified and gzipped)](https://bundlephobia.com/result?p=magica11y).
-  * It uses the [`window.matchMedia`](https://developer.mozilla.org/docs/Web/API/Window/matchMedia) API underneath.
-  * It’s optimized for performance; all the module functions are designed in such a way that they exit early.
-  * It provides a clean and semantic API to work with.
+  * It has zero dependencies
+  * It’s lightweight, just under [1KB (minified and gzipped)](https://bundlephobia.com/result?p=magica11y)
+  * It uses the [`window.matchMedia`](https://developer.mozilla.org/docs/Web/API/Window/matchMedia) API underneath
+  * It’s optimized for performance; all the module functions are designed in such a way that they exit early
+  * It provides a clean, well-documented and semantic API to work with
+
+**Magica11y** includes the following utility functions…
+  * 🎢 [`prefersReducedMotion()`](#-prefersreducedmotion)
+  * 🕯 [`lightLevel()`](#-lightlevel)
+  * 📺 [`environmentBlending()`](#-environmentblending)
+  * 🌗 [`invertedColors()`](#-invertedcolors)
 
 # 🚀 Getting started
 
@@ -68,14 +74,6 @@ If you installed **Magica11y** via a `<script>` tag, then `magica11y` is availab
 ---
 
 # 🗼 API documentation
-
-**Magica11y** includes the following modules…
-
-* [`prefersReducedMotion()`](#-prefersreducedmotion)
-* [`lightLevel()`](#-lightlevel)
-* [`environmentBlending()`](#-environmentblending)
-* [`invertedColors()`](#-invertedcolors)
-
 
 ## 🎢 `prefersReducedMotion()`
 
@@ -132,7 +130,7 @@ The `availableLightLevels` object contains all the possible values supported by 
 * `availableLightLevels.WASHED` (spec: [`'washed'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-light-level-washed))
   > The device is used in an exceptionally bright environment, causing the screen to be washed out and difficult to read. For example: bright daylight.
 * `null`
-  > The user’s preference could not be determined.
+  > The device’s ambient light-level could not be determined.
 
 ---
 
@@ -159,10 +157,12 @@ The `availableDisplayBlends` object contains all the possible values supported b
   > The display blends the colors of the canvas with the real world using additive mixing. Black is fully transparent and white is 100% light. For example: a head-up display in a car.
 * `availableDisplayBlends.SUBTRACTIVE` (spec: [`'subtractive'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-environment-blending-subtractive))
   > The display blends the colors of the canvas with the real world using subtractive mixing. White is fully transparent and dark colors have the most contrast. For example: an LCD display embedded in a bathroom mirror.
+* `null`
+  > The display characteristics could not be determined.
 
 ---
 
-## 📺 `invertedColors()`
+## 🌗 `invertedColors()`
 
 Detects the user’s preferences for inverted colors using [`'inverted-colors'`](https://drafts.csswg.org/mediaqueries-5/#inverted-colors) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
 
