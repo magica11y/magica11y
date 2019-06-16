@@ -8,3 +8,4 @@ magica11y_api_methods:
   - prefersReducedMotion
   - lightLevel
   - environmentBlending
+  - invertedColors

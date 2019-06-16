@@ -74,6 +74,7 @@ If you installed **Magica11y** via a `<script>` tag, then `magica11y` is availab
 * [`prefersReducedMotion()`](#-prefersreducedmotion)
 * [`lightLevel()`](#-lightlevel)
 * [`environmentBlending()`](#-environmentblending)
+* [`invertedColors()`](#-invertedcolors)
 
 
 ## 🎢 `prefersReducedMotion()`
@@ -158,6 +159,30 @@ The `availableDisplayBlends` object contains all the possible values supported b
   > The display blends the colors of the canvas with the real world using additive mixing. Black is fully transparent and white is 100% light. For example: a head-up display in a car.
 * `availableDisplayBlends.SUBTRACTIVE` (spec: [`'subtractive'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-environment-blending-subtractive))
   > The display blends the colors of the canvas with the real world using subtractive mixing. White is fully transparent and dark colors have the most contrast. For example: an LCD display embedded in a bathroom mirror.
+
+---
+
+## 📺 `invertedColors()`
+
+Detects the user’s preferences for inverted colors using [`'inverted-colors'`](https://drafts.csswg.org/mediaqueries-5/#inverted-colors) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
+
+> The [`'inverted-colors'`](https://drafts.csswg.org/mediaqueries-5/#inverted-colors) media feature indicates whether the content is displayed normally, or whether colors have been inverted.
+
+### ⚗️ ️️Usage
+
+```js
+import invertedColors, { colorPreferences } from 'magica11y/invertedColors';
+
+const colorPreference = invertedColors();
+const invertColors = colorPreference === colorPreferences.INVERTED;
+```
+
+The `colorPreferences` object contains all the possible values supported by the `'environment-blending'` media query…
+
+* `colorPreferences.NONE` (spec: [`'none'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-inverted-colors-none))
+  > Colors are displayed normally.
+* `colorPreferences.INVERTED` (spec: [`'inverted'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-inverted-colors-inverted))
+  > All pixels within the displayed area have been inverted.
 * `null`
   > The user’s preference could not be determined.
 
