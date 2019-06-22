@@ -63,7 +63,7 @@
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "coveralls": "^3.0.3",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-flowtype": "^3.9.1",
