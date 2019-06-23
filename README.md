@@ -216,7 +216,7 @@ The `transparencyPreferences` object contains all the possible values supported 
 
 ---
 
-## 💎 `prefersContrast()`
+## 🔆 `prefersContrast()`
 
 Detects user’s preferences for contrast using the [`'prefers-contrast'`](https://drafts.csswg.org/mediaqueries-5/#prefers-contrast) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
 
