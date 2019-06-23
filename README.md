@@ -34,6 +34,7 @@ Magica11y
   * 📺 [`environmentBlending()`](#-environmentblending)
   * 🌗 [`invertedColors()`](#-invertedcolors)
   * 💎 [`prefersReducedTransparency()`](#-prefersreducedtransparency)
+  * 🔆 [`prefersContrast()`](#-preferscontrast)
 
 # 🚀 Getting started
 
@@ -213,7 +214,35 @@ The `transparencyPreferences` object contains all the possible values supported 
 * `null`
   > The user’s preference could not be determined.
 
-  --
+---
+
+## 💎 `prefersContrast()`
+
+Detects user’s preferences for contrast using the [`'prefers-contrast'`](https://drafts.csswg.org/mediaqueries-5/#prefers-contrast) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
+
+> The [`prefers-contrast`](https://drafts.csswg.org/mediaqueries-5/#prefers-contrast) media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast.
+
+### ⚗️ Usage
+
+```js
+import prefersContrast, { contrastPreferences } from 'magica11y/prefersContrast';
+
+const contrastPreference = prefersContrast();
+const useHighContrastColorScheme = contrastPreference === contrastPreferences.HIGH;
+```
+
+The `contrastPreferences` object contains all the possible values supported by the `'prefers-contrast'` media query…
+
+* `contrastPreferences.NO_PREFERENCE` (spec: [`'no-preference'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-contrast-no-preference))
+  > Indicates that the user has made no preference known to the system.
+* `contrastPreferences.HIGH` (spec: [`'high'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-contrast-high))
+  > Indicates that user has notified the system that they prefer an interface that has a higher level of contrast.
+* `contrastPreferences.LOW` (spec: [`'low'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-contrast-low))
+  > Indicates that user has notified the system that they prefer an interface that has a lower level of contrast.
+* `null`
+  > The user’s preference could not be determined.
+
+---
 
 # 🏁 Typechecking
 

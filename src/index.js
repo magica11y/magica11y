@@ -4,6 +4,7 @@ import lightLevel, { availableLightLevels, type LightLevel } from './lightLevel'
 import prefersReducedMotion, { motionPreferences, type MotionPreference } from './prefersReducedMotion';
 import environmentBlending, { availableDisplayBlends, type DisplayBlend } from './environmentBlending';
 import invertedColors, { colorPreferences, type ColorPreference } from './invertedColors';
+import prefersContrast, { contrastPreferences, type ContrastPreference } from './prefersContrast';
 import prefersReducedTransparency, {
   transparencyPreferences,
   type TransparencyPreference,
@@ -20,6 +21,8 @@ export {
   colorPreferences,
   prefersReducedTransparency,
   transparencyPreferences,
+  prefersContrast,
+  contrastPreferences,
 };
 
-export type { LightLevel, MotionPreference, DisplayBlend, ColorPreference, TransparencyPreference };
+export type { LightLevel, MotionPreference, DisplayBlend, ColorPreference, TransparencyPreference, ContrastPreference };

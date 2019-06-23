@@ -9,3 +9,4 @@ magica11y_api_methods:
   - environmentBlending
   - invertedColors
   - prefersReducedTransparency
+  - prefersContrast
