@@ -1,8 +1,7 @@
 remote_theme: magica11y/magica11y-jekyll-theme
 
 title: "Magica11y"
-subtitle: ""
-description: "A suite of utility functions to detect "user-preference" and "environment" media features."
+description: "A suite of utility functions to detect 'user-preference' and 'environment' media features."
 
 magica11y_api_methods:
   - prefersReducedMotion
