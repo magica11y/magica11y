@@ -33,6 +33,7 @@ Magica11y
   * 🕯 [`lightLevel()`](#-lightlevel)
   * 📺 [`environmentBlending()`](#-environmentblending)
   * 🌗 [`invertedColors()`](#-invertedcolors)
+  * 💎 [`prefersReducedTransparency()`](#-prefersreducedtransparency)
 
 # 🚀 Getting started
 
@@ -187,6 +188,32 @@ The `colorPreferences` object contains all the possible values supported by the 
   > The user’s preference could not be determined.
 
 ---
+
+## 💎 `prefersReducedTransparency()`
+
+Detects user’s preferences for reduced transparency using the [`'prefers-reduce-transparency'`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-transparency) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
+
+> The [`prefers-reduced-transparency`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-transparency) media feature is used to detect if the user has requested the system minimize the amount of animation or transparency it uses.
+
+### ⚗️ Usage
+
+```js
+import prefersReducedTransparency, { transparencyPreferences } from 'magica11y/prefersReducedTransparency';
+
+const transparencyPreference = prefersReducedTransparency();
+const disableAnimations = transparencyPreference === transparencyPreferences.REDUCE;
+```
+
+The `transparencyPreferences` object contains all the possible values supported by the `'prefers-reduce-transparency'` media query…
+
+* `transparencyPreferences.NO_PREFERENCE` (spec: [`'no-preference'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-transparency-no-preference))
+  > Indicates that the user has made no preference known to the system.
+* `transparencyPreferences.REDUCE` (spec: [`'reduce'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-transparency-reduce))
+  > Indicates that user has notified the system that they prefer an interface that minimizes the amount of movement or animation, preferably to the point where all non-essential movement is removed.
+* `null`
+  > The user’s preference could not be determined.
+
+  --
 
 # 🏁 Typechecking
 
