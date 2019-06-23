@@ -193,7 +193,7 @@ The `colorPreferences` object contains all the possible values supported by the 
 
 Detects user’s preferences for reduced transparency using the [`'prefers-reduce-transparency'`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-transparency) [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5) [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries).
 
-> The [`prefers-reduced-transparency`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-transparency) media feature is used to detect if the user has requested the system minimize the amount of animation or transparency it uses.
+> The [`prefers-reduced-transparency`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-transparency) media feature is used to detect if the user has requested the system minimize the amount of transparent or translucent layer effects it uses.
 
 ### ⚗️ Usage
 
