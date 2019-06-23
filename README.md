@@ -201,7 +201,7 @@ Detects user’s preferences for reduced transparency using the [`'prefers-reduc
 import prefersReducedTransparency, { transparencyPreferences } from 'magica11y/prefersReducedTransparency';
 
 const transparencyPreference = prefersReducedTransparency();
-const disableAnimations = transparencyPreference === transparencyPreferences.REDUCE;
+const reduceTransparency = transparencyPreference === transparencyPreferences.REDUCE;
 ```
 
 The `transparencyPreferences` object contains all the possible values supported by the `'prefers-reduce-transparency'` media query…
