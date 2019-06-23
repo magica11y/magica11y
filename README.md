@@ -209,7 +209,7 @@ The `transparencyPreferences` object contains all the possible values supported 
 * `transparencyPreferences.NO_PREFERENCE` (spec: [`'no-preference'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-transparency-no-preference))
   > Indicates that the user has made no preference known to the system.
 * `transparencyPreferences.REDUCE` (spec: [`'reduce'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-reduced-transparency-reduce))
-  > Indicates that user has notified the system that they prefer an interface that minimizes the amount of movement or animation, preferably to the point where all non-essential movement is removed.
+  > Indicates that user has notified the system that they prefer an interface that minimizes the amount of transparent or translucent layer effects.
 * `null`
   > The user’s preference could not be determined.
 
