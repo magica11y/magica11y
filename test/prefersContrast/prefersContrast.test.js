@@ -29,9 +29,7 @@ describe('prefersContrast()', () => {
     testParameters.forEach((testParameter: TestParameter) => {
       window.matchMedia = jest
         .fn()
-        .mockImplementation(() =>
-          mockWindowMatchMedia(true, `(prefers-contrast: ${testParameter.testInput})`),
-        );
+        .mockImplementation(() => mockWindowMatchMedia(true, `(prefers-contrast: ${testParameter.testInput})`));
 
       const contrastPreference = prefersContrast();
 

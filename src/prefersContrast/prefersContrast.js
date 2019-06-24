@@ -20,8 +20,7 @@ const contrastPreferenceValues: Array<ContrastPreference> = [
  */
 const prefersContrast = (): ?ContrastPreference => {
   const matchedContrastPreference: ?ContrastPreference = contrastPreferenceValues.find(
-    (contrastPreferenceValue: ContrastPreference) =>
-      matchUserPreference('prefers-contrast', contrastPreferenceValue),
+    (contrastPreferenceValue: ContrastPreference) => matchUserPreference('prefers-contrast', contrastPreferenceValue),
   );
 
   if (matchedContrastPreference) {
