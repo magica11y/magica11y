@@ -33,12 +33,17 @@
     "a11y",
     "accessibility",
     "css",
-    "mediaquery",
+    "media-query",
     "level-5",
     "matchmedia",
     "prefers-reduced-motion",
     "light-level",
-    "environment-blending"
+    "environment-blending",
+    "inverted-colors",
+    "prefers-reduced-transparency",
+    "prefers-contrast",
+    "prefers-color-scheme",
+    "forced-colors"
   ],
   "engines": {
     "node": ">=10",
