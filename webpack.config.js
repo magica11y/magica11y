@@ -5,8 +5,11 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
   entry: {
     all: './src',
-    prefersReducedMotion: './src/prefersReducedMotion',
+    environmentBlending: './src/environmentBlending',
+    invertedColors: './src/invertedColors',
     lightLevel: './src/lightLevel',
+    prefersReducedMotion: './src/prefersReducedMotion',
+    prefersReducedTransparency: './src/prefersReducedTransparency',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
