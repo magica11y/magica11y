@@ -1,7 +1,7 @@
 {
   "name": "magica11y",
   "homepage": "https://magica11y.github.io",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "A suite of utility functions to detect 'user-preference' and 'environment' media features.",
   "module": "src/index.js",
   "browser": "dist/magica11y.all.js",
